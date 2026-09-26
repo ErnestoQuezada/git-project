@@ -4,19 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      #profile3 {
+        background-color: orange;
+        padding: 7px;
+        border-radius: 7px;
+        text-align: center;
+      }
+      .content img {
+        width: 150px;
+        min-width: 150px;
+      }
+    </style>
   </head>
   <body>
-    Nombre: Ernesto
-    <br />
-    Apellido: Quezada
-    <br />
-    <br />
-    <img src="acre.jpg" alt="Adopting Bitcoin 2023" width="400" />
-    <br />
-    <h1>CUBO+</h1>
-    <small
-      >Estudiar Bitcoin hoy es invertir en el conocimiento que puede cambiar tu
-      mañana.</small
-    >
+    <div class="content" id="profile3">
+      <p>Pull Request 3</p>
+      <p>Ernesto Quezada</p>
+      <img src="ernesto.jpg" />
+    </div>
   </body>
 </html>
