@@ -49,6 +49,26 @@
         text-align: center;
       }
 
+      #profile5 .email {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+      }
+
+      #profile5 .photos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin: 12px 0 5px;
+      }
+
+      #profile5 .photos img {
+        margin-top: 0;
+        border: 3px solid white;
+        box-sizing: border-box;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+      }
+
       #profile6 {
         color: white;
         display: flex;
@@ -141,11 +161,13 @@
       <div class="content" id="profile5">
         <p>Diego Novoa</p>
         <p>Pull request 5</p>
-        <p style="overflow-wrap: anywhere; max-width: 100%;">
-          diego.chill.life.2812@gmail.com
-        </p>
+        <p class="email">diego.chill.life.2812@gmail.com</p>
         <p>Fecha: 26/09/2026</p>
-        <img src="Diego.jpeg" />
+
+        <div class="photos">
+          <img src="Diego.jpeg" alt="Diego Novoa" />
+          <img src="Yo_Bebe.jpeg" alt="Diego de bebé" />
+        </div>
       </div>
 
       <div class="content" id="profile6">
