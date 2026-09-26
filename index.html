@@ -1,162 +1,226 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Perfiles Cubo AI</title>
+
     <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 24px 16px;
+        background-color: #f3f4f8;
+        font-family: Arial, sans-serif;
+        color: #1f2937;
+      }
+
       #profiles {
         display: flex;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 18px;
         justify-content: center;
+        align-items: flex-start;
+        max-width: 1300px;
+        margin: 0 auto;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
         align-items: center;
+        gap: 6px;
+        width: 230px;
+        max-width: 100%;
+        padding: 16px;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      }
+
+      .content p {
+        width: 100%;
+        margin: 0;
+        line-height: 1.4;
+        overflow-wrap: anywhere;
+      }
+
+      .name {
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .email,
+      .date {
+        font-size: 13px;
+      }
+
+      .photos {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        margin-top: 8px;
+      }
+
+      .photos img {
+        display: block;
+        width: 100%;
+        height: 190px;
+        object-fit: contain;
+        background-color: #ffffff;
+        border: 3px solid #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
       }
 
       #profile1 {
         background-color: rgba(0, 0, 255, 0.326);
-        padding: 7px;
-        border-radius: 7px;
-        text-align: center;
       }
+
       #profile2 {
         background-color: rgba(0, 204, 255, 0.441);
-        padding: 7px;
-        border-radius: 7px;
-        text-align: center;
       }
+
       #profile3 {
         background-color: orange;
-        padding: 7px;
-        border-radius: 7px;
-        text-align: center;
       }
+
       #profile4 {
         background-color: rgba(140, 124, 163, 0.297);
-        padding: 7px;
-        border-radius: 7px;
-        text-align: center;
       }
+
       #profile5 {
         background-color: rgba(38, 0, 255, 0.308);
-        padding: 7px;
-        border-radius: 7px;
-        text-align: center;
       }
 
       #profile6 {
         color: white;
-        display: flex;
-        gap: 10px;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
         background-color: #228b22;
-        padding: 7px;
-        border-radius: 7px;
-        text-align: center;
       }
+
       #profile7 {
+        color: white;
         background-color: #2c2f56bc;
-        padding: 7px;
-        border-radius: 7px;
       }
+
       #profile8 {
         background-color: orange;
-        padding: 7px;
-        border-radius: 7px;
-        text-align: center;
       }
+
       #profile9 {
         background-color: rgb(239, 74, 23);
-        padding: 7px;
-        border-radius: 7px;
-        text-align: center;
       }
+
       #profile10 {
         color: white;
         background-color: black;
-        padding: 6px;
-        border-radius: 6px;
-        text-align: center;
-      }
-      .content {
-        display: flex;
-        width: 200px;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        p {
-          margin: 0;
-        }
-      }
-      .content img {
-        width: 180px;
-        height: 180px;
-        margin-top: 10px;
-        object-fit: cover;
-        border-radius: 8px;
       }
     </style>
   </head>
+
   <body>
-    <section id="profiles">
+    <section id="profiles" aria-label="Perfiles de participantes">
       <div class="content" id="profile1">
-        <p>Moises Iglesias</p>
+        <p class="name">Moises Iglesias</p>
         <p>pull request 1</p>
-        <img src="moises.jpg" />
+
+        <div class="photos">
+          <img src="moises.jpg" alt="Moises Iglesias" />
+        </div>
       </div>
+
       <div class="content" id="profile2">
-        <p>Felícito Escobar</p>
+        <p class="name">Felícito Escobar</p>
         <p>pull request 2</p>
-        <img src="felicito.jpeg" />
+
+        <div class="photos">
+          <img src="felicito.jpeg" alt="Felícito Escobar" />
+        </div>
       </div>
+
       <div class="content" id="profile3">
         <p>Pull Request 3</p>
-        <p>Ernesto Quezada</p>
-        <p>acreonte@cubo.ia</p>
-        <p>September 26, 2026</p>
-        <img src="ernesto.jpg" />
-        <img src="bitcoin-matrix.jpg" />
-      </div>
-      <div class="content" id="profile4">
-        <p>Memo Ortiz</p>
-        <p>pull request 4</p>
-        <img src="memo.jpeg" />
-      </div>
-      <div class="content" id="profile5">
-        <p>Diego Novoa</p>
-        <p>Pull request 5</p>
-        <img src="Diego.jpeg" />
-      </div>
-      <div class="content" id="profile6">
-        <div>
-          <p>
-            PR #6 <br />
-            Mauricio Martínez
-          </p>
+        <p class="name">Ernesto Quezada</p>
+        <p class="email">acreonte@cubo.ia</p>
+        <p class="date">September 26, 2026</p>
+
+        <div class="photos">
+          <img src="ernesto.jpg" alt="Ernesto Quezada" />
+          <img
+            src="bitcoin-matrix.jpg"
+            alt="Imagen adicional de Ernesto: Bitcoin Matrix"
+          />
         </div>
-        <img src="./mauricio.png" alt="Mauricio Martínez" />
       </div>
+
+      <div class="content" id="profile4">
+        <p class="name">Memo Ortiz</p>
+        <p>pull request 4</p>
+
+        <div class="photos">
+          <img src="memo.jpeg" alt="Memo Ortiz" />
+        </div>
+      </div>
+
+      <div class="content" id="profile5">
+        <p class="name">Diego Novoa</p>
+        <p>Pull request 5</p>
+        <p class="email">diego.chill.life.2812@gmail.com</p>
+        <p class="date">Fecha: 26/09/2026</p>
+
+        <div class="photos">
+          <img src="Diego.jpeg" alt="Diego Novoa" />
+          <img src="Yo_Bebe.jpeg" alt="Diego de bebé" />
+        </div>
+      </div>
+
+      <div class="content" id="profile6">
+        <p>PR #6</p>
+        <p class="name">Mauricio Martínez</p>
+
+        <div class="photos">
+          <img src="./mauricio.png" alt="Mauricio Martínez" />
+        </div>
+      </div>
+
       <div class="content" id="profile7">
-        <p>Fernando Chicas</p>
+        <p class="name">Fernando Chicas</p>
         <p>pull request 7</p>
-        <img src="fernando.jpg" />
+
+        <div class="photos">
+          <img src="fernando.jpg" alt="Fernando Chicas" />
+        </div>
       </div>
+
       <div class="content" id="profile8">
-        <p>Oscar matal</p>
+        <p class="name">Oscar matal</p>
         <p>pull request 8</p>
-        <img src="oscar.jpeg" />
+
+        <div class="photos">
+          <img src="oscar.jpeg" alt="Oscar matal" />
+        </div>
       </div>
+
       <div class="content" id="profile9">
-        <p>Kevin Fonseca</p>
+        <p class="name">Kevin Fonseca</p>
         <p>pull request 9</p>
-        <img src="fonsii.jpeg" />
+
+        <div class="photos">
+          <img src="fonsii.jpeg" alt="Kevin Fonseca" />
+        </div>
       </div>
+
       <div class="content" id="profile10">
-        <p>DieFi</p>
+        <p class="name">DieFi</p>
         <p>pull request 10</p>
-        <img src="DieFi.JPEG" />
+
+        <div class="photos">
+          <img src="DieFi.JPEG" alt="DieFi" />
+        </div>
       </div>
     </section>
   </body>
